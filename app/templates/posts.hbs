@@ -1,14 +1,42 @@
-{{#each}}
-<div class="post-preview">
-    <a href="post.html">
-        <h2 class="post-title">
-            {{title}}
-        </h2>
-        <h3 class="post-subtitle">
-            {{subtitle}}
-        </h3>
-    </a>
-    <p class="post-meta">Posted by <a href="#">{{postedBy}}</a> on {{postedDate}}</p>
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Ember Bloglog</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {{#each}}
+            <div class="post-preview">
+                {{#link-to 'post' this}}
+                <h2 class="post-title">
+                {{title}}
+                </h2>
+                <h3 class="post-subtitle">
+                {{subtitle}}
+                </h3>
+                {{/link-to}}
+                <p class="post-meta">Posted by <a href="http://twitter.com/dlameri">{{postedBy}}</a> on {{postedDate}}</p>
+            </div>
+            <hr>
+            {{/each}}
+            <!-- Pager -->
+            <!--
+            <ul class="pager">
+                <li class="next">
+                    <a href="#">Older Posts &rarr;</a>
+                </li>
+            </ul>
+            -->
+        </div>
+    </div>
 </div>
-<hr>
-{{/each}}

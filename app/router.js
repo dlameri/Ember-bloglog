@@ -17,7 +17,10 @@ if (config.environment === 'production') {
 }
 
 Router.map(function() {
-    this.route('posts');
+    this.resource('posts');
+    this.resource('post', {
+        path: '/post/:post_id'
+    });
 });
 
 export
