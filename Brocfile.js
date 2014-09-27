@@ -27,8 +27,14 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
   destDir: 'fonts'
 });
 
+ /* FontAwesome */
+app.import('bower_components/fontawesome/css/font-awesome.css');
+app.import('bower_components/fontawesome/fonts/fontawesome-webfont.woff', {
+  destDir: 'fonts'
+});
+
 /* Free Layout */
-app.import('vendor/clean-blog/css/clean-blog.min.css');
+app.import('vendor/clean-blog/css/clean-blog.css');
 app.import('vendor/clean-blog/js/clean-blog.js');
 
 module.exports = app.toTree();
