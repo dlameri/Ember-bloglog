@@ -16,10 +16,19 @@ var app = new EmberApp();
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
+
+/*Bootstrap*/
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
   destDir: 'assets'
 });
+app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
+  destDir: 'fonts'
+});
+
+/* Free Layout */
+app.import('vendor/clean-blog/css/clean-blog.min.css');
+app.import('vendor/clean-blog/js/clean-blog.js');
 
 module.exports = app.toTree();
